@@ -6,8 +6,7 @@ section[is="be-part"] {
   );
   border-block-end: 1px solid hsl(var(--separator));
   border-radius: 100% / 0 0 2rem 2rem;
-  margin-block-start: -2rem;
-  padding: 4rem 1rem 5rem;
+  padding: 2rem 1rem 4rem;
   text-align: center;
 
   & > h2 {
@@ -19,5 +18,9 @@ section[is="be-part"] {
   & > p {
     margin-inline: auto;
     max-inline-size: 32rem;
+
+    &:last-of-type {
+      margin-block-start: 2em;
+    }
   }
 }

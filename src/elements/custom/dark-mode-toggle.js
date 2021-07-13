@@ -61,7 +61,7 @@ template.innerHTML = `
     align-items: center;
     display: flex;
     color: var(--${NAME}-label, inherit);
-    font: inherit;
+    font-family: inherit;
     font-weight: 700;
     min-height: 2rem;
     position: relative;

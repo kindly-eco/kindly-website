@@ -7,7 +7,7 @@ section[is="roots"] {
   border-block-end: 2px solid hsl(var(--sunken));
   border-radius: 100%/0 0 2rem 2rem;
   overflow: hidden;
-  padding-block-start: 3rem;
+  padding-block-start: 1rem;
   position: relative;
   z-index: 2;
 
@@ -96,24 +96,40 @@ section[is="roots"] {
         font-family: Hoefler, serif;
         font-style: italic;
         font-weight: 400;
+        margin-block-start: 0.48em;
       }
     }
 
     & > article {
-      background-color: hsl(var(--elevated));
-      border-radius: 1rem 1rem 75% 75% / 1rem 1rem 10% 10%;
-      box-shadow: 0 1px 0 0 hsl(var(--drop)), inset 0 1px 0 0 hsl(var(--inset));
-      padding: 1.5rem;
       position: relative;
       text-align: center;
 
+      & > span {
+        block-size: 3rem;
+        display: grid;
+        place-content: flex-end center;
+      }
+
       & > h4 {
         font-size: 1.17em;
-        margin-block: 0;
+        margin-block-start: 0.48em;
       }
 
       & > p {
         margin-block-end: 0.48em;
+      }
+    }
+
+    & > div {
+      text-align: center;
+      z-index: 3;
+
+      & > * {
+        margin-inline: auto;
+      }
+
+      & > p:last-of-type {
+        margin-block-start: 2em;
       }
     }
 
@@ -124,6 +140,10 @@ section[is="roots"] {
       padding-block-start: 4rem;
 
       & > h3 {
+        grid-column: 1 / -1;
+      }
+
+      & > div {
         grid-column: 1 / -1;
       }
     }
@@ -149,6 +169,6 @@ section[is="roots"] {
   }
 
   @media (min-width: 34em) {
-    padding-block-start: 4rem;
+    padding-block-start: 3rem;
   }
 }

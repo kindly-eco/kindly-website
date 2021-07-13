@@ -177,6 +177,7 @@
       "last-of-type",
       "not",
       "nth-child",
+      "nth-of-type",
       "root",
       "visited"
     ],
