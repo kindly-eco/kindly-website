@@ -1,14 +1,18 @@
 aside[is="statistics"] {
-  padding: 3rem 1.5rem 0;
+  padding: 3rem 1rem 0;
   text-align: center;
 
   & > p {
-    background-color: hsl(var(--accent));
-    border-radius: 0.5rem 0.5rem 100% 100% / 0.5rem 0.5rem 2rem 2rem;
-    box-shadow: 0 1px 0 0 hsl(var(--drop));
+    background: no-repeat center center url("./assets/statistics.svg");
+    background-size: contain;
     color: hsl(var(--on-accent));
-    margin: -5rem auto 3rem;
-    max-inline-size: 20rem;
-    padding: 1rem 2rem 1.25rem;
+    margin: -7.25rem auto 3rem; /* stylelint-disable-line scales/space */
+    padding: 3rem 1rem;
+
+    & > span {
+      display: block;
+      margin-inline: auto;
+      max-inline-size: 20rem;
+    }
   }
 }
