@@ -1,5 +1,6 @@
 a[is="signpost"] {
-  font-size: 1.17em;
+  font-family: Ariata, serif;
+  font-size: 1em;
   font-weight: 700;
 
   &::after {

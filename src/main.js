@@ -1,5 +1,11 @@
-document.addEventListener("colorschemechange", (e) => {
-  if (e.detail.colorScheme === "dark") {
+window.addEventListener("DOMContentLoaded", () => {
+  setupPlaypressImage();
+  updatePlaypressImage();
+});
+
+document.addEventListener("colorschemechange", (event) => {
+  updatePlaypressImage();
+  if (event.detail.colorScheme === "dark") {
     const toggle = document.getElementById("dark-mode-toggle");
     const info = document.createElement("p");
     info.id = "dark-mode-info";
@@ -12,3 +18,22 @@ document.addEventListener("colorschemechange", (e) => {
     if (toggle) toggle.remove();
   }
 });
+
+function setupPlaypressImage() {
+  const pictures = document.querySelectorAll("picture");
+  for (let picture of pictures) {
+    let source = picture.querySelector("source");
+    let img = picture.querySelector("img");
+    img.dataset.dark = source.srcset;
+    img.dataset.light = img.src;
+  }
+}
+
+function updatePlaypressImage() {
+  const darkModeToggle = document.querySelector("dark-mode-toggle");
+  const pictures = document.querySelectorAll("picture");
+  for (let picture of pictures) {
+    let img = picture.querySelector("img");
+    img.src = img.dataset[darkModeToggle.mode];
+  }
+}

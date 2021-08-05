@@ -3,4 +3,6 @@ dark-mode-toggle {
   --dark-mode-toggle-track: hsl(var(--toggle-track));
   --dark-mode-toggle-thumb: hsl(var(--toggle-thumb));
   --dark-mode-toggle-focus: hsl(var(--focus));
+
+  font-family: Ariata, serif;
 }
