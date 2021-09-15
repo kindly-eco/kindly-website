@@ -1,0 +1,36 @@
+:root {
+  --body: Georgia, serif;
+  --display: Ariata, serif;
+  --alt-display: Hoefler, serif;
+  --grass-1-2: 144deg 21% 91%;
+  --grass-2: 148deg 22% 68%;
+  --grass-3: 148deg 22% 52%;
+  --grass-4: 150deg 26% 43%;
+  --grass-5: 149deg 25% 38%;
+  --grass-8: 149deg 23% 28%;
+  --grass-9: 148deg 23% 25%;
+  --wheat-1: 60deg 50% 100%;
+  --wheat-1-06: 45deg 55% 96%;
+  --wheat-1-2: 48deg 28% 90%;
+  --wheat-1-5: 51deg 13% 81%;
+  --wheat-2: 45deg 8% 70%;
+  --wheat-4: 45deg 3% 49%;
+  --wheat-8: 48deg 3% 31%;
+  --wheat-12: 60deg 3% 21%;
+  --wheat-13: 60deg 2% 19%;
+  --wheat-16: 60deg 3% 13%;
+  --wheat-17: 60deg 2% 11%;
+  --wheat-19: 60deg 3% 6%;
+  --sky-2: 208deg 46% 72%;
+  --sky-6: 204deg 50% 37%;
+  --violet-2: 273deg 39% 77%;
+  --violet-6: 270deg 32% 47%;
+  --blood-2: 10deg 77% 76%;
+  --blood-6: 2deg 73% 43%;
+  --sun-1-1: 50deg 100% 87%;
+  --sun-1-2: 50deg 100% 75%;
+  --sun-1-5: 51deg 84% 57%;
+  --sun-4: 50deg 73% 33%;
+  --sun-7: 49deg 63% 25%;
+  --sun-10: 49deg 57% 19%;
+}

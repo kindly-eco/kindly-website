@@ -18,7 +18,6 @@
     "color-function-notation": "modern",
     "color-named": "never",
     "color-no-hex": true,
-    "no-unknown-animations": true,
     "csstools/use-nesting": "always",
     "custom-media-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "custom-property-empty-line-before": [
@@ -41,26 +40,29 @@
     ],
     "declaration-no-important": true,
     "declaration-property-unit-allowed-list": {
-      "/^border$|^border.*(width$|block$|inline$|start$|end$/)": ["px"],
       "/^((min|max)-)?(block-size$|inline-size$)/": ["%", "ch", "rem"],
-      "/^font/": ["%", "em"],
+      "/^border$|^border.*(width$|block$|inline$|start$|end$/)": ["px"],
+      "/^font/": ["%", "em", "vw"],
       "/^gap/": ["rem"],
       "/^inset": ["rem"],
-      "/^margin/": ["em", "rem", "vw"],
+      "/^margin/": ["%", "em", "rem", "vw"],
+      "/^padding/": ["%", "em", "rem"],
       "/outline/": ["px"],
-      "/^padding/": ["em", "rem"],
       "/radius$/": ["%", "rem"]
     },
     "font-weight-notation": "numeric",
     "function-allowed-list": [
       "attr",
       "calc",
+      "clamp",
       "counters",
       "fit-content",
       "format",
       "grayscale",
       "hsl",
       "linear-gradient",
+      "max",
+      "min",
       "minmax",
       "polygon",
       "repeat",
@@ -87,6 +89,7 @@
       "/^((min|max)-)?(width|height$)/": ["/[0-9]em$/"]
     },
     "no-descending-specificity": null,
+    "no-unknown-animations": true,
     "number-max-precision": 4,
     "order/order": [
       ["custom-properties", "declarations", "rules", "at-rules"],
@@ -169,7 +172,8 @@
       "nth-child",
       "nth-of-type",
       "root",
-      "visited"
+      "visited",
+      "where"
     ],
     "selector-pseudo-element-colon-notation": "double",
     "selector-type-no-unknown": [

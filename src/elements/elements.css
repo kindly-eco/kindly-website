@@ -1,4 +1,4 @@
-html {
+:where(html) {
   color-scheme: light dark;
   font-size: 93.75%;
 
@@ -15,174 +15,140 @@ html {
   }
 }
 
-body {
+:where(body) {
   background-color: hsl(var(--background, var(--wheat-50)));
   box-shadow: 0 8px 8px hsl(var(--drop));
   color: hsl(var(--text));
-  font-family: Georgia, serif;
+  font-family: var(--body, sans-serif);
   margin: 0 auto;
   max-inline-size: 90rem;
 }
 
-main {
+:where(main) {
   padding-inline: 1rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Ariata, serif;
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--display, serif);
 }
 
-h1,
-h2,
-h3 {
+:where(h1, h2, h3) {
   line-height: 1.2;
 }
 
-h1 {
+:where(h1) {
   font-size: 3em;
   margin-block-end: 0.28em;
 }
 
-h2 {
+:where(h2) {
   font-size: 2.5em;
   margin-block-end: 0.48em;
 }
 
-h3 {
+:where(h3) {
   font-size: 2em;
   margin-block-end: 0.58em;
 }
 
-h4 {
+:where(h4) {
   font-size: 1.5em;
   margin-block-end: 0.83em;
 }
 
-h5 {
+:where(h5) {
   font-size: 1.17em;
   margin-block-end: 1em;
 }
 
-h6 {
+:where(h6) {
   font-size: 1em;
   margin-block-end: 1.5em;
 }
 
-cite,
-dd,
-dt,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-li,
-p {
+:where(cite, dd, dt, h1, h2, h3, h4, h5, h6, hr, li, p) {
   max-inline-size: 50ch;
 }
 
-address,
-dd,
-dt,
-h4,
-h5,
-h6,
-li,
-p,
-td,
-th {
+:where(address, dd, dt, h4, h5, h6, li, p, td, th) {
   line-height: 1.5;
 }
 
-blockquote,
-figure {
+:where(blockquote, figure) {
   margin-inline: 2rem;
 }
 
-dd {
+:where(dd) {
   margin-inline-start: 2rem;
 }
 
-ol,
-ul {
+:where(ol, ul) {
   padding-inline-start: 2rem;
 }
 
-figcaption {
+:where(figcaption) {
   margin-block: 0.48em;
 }
 
-sub,
-sup {
+:where(sub, sup) {
   line-height: 1;
 }
 
-abbr {
+:where(abbr) {
   text-decoration: none;
 }
 
-hr {
+:where(hr) {
   border-style: solid;
   color: hsl(var(--separator));
   margin-inline: 0;
 }
 
-iframe,
-img,
-svg,
-video {
+:where(iframe, img, svg, video) {
   display: block;
   max-inline-size: 100%;
 }
 
-img {
+:where(img) {
   block-size: auto;
 }
 
-table {
+:where(table) {
   border-collapse: collapse;
   max-inline-size: 100%;
 }
 
-caption {
+:where(caption) {
   text-align: start;
 }
 
-td,
-th {
+:where(td, th) {
   border-block-end: 1px solid hsl(var(--separator));
   padding: 0.75rem 1.5rem 0.75rem 0;
   text-align: start;
 }
 
-form {
+:where(form) {
   margin-block: 1rem;
 }
 
-fieldset {
+:where(fieldset) {
   border: none;
   max-inline-size: 100%;
   padding: 0;
 
-  & > div {
+  & > :where(div) {
     display: grid;
     grid-gap: 1.25rem;
     position: relative;
 
-    & > div {
+    & > :where(div) {
       position: relative;
     }
   }
 }
 
-legend {
+:where(legend) {
   color: hsl(var(--text-display));
   font-family: inherit;
   font-size: 1.5em;
@@ -190,21 +156,19 @@ legend {
   margin-block-end: 1rem;
 }
 
-label {
+:where(label) {
   display: block;
   font-family: inherit;
   font-size: inherit;
   font-weight: 700;
   margin-block: 0.48em;
 
-  & > input {
+  & > :where(input) {
     margin-inline-end: 0.5rem;
   }
 }
 
-input,
-select,
-textarea {
+:where(input, select, textarea) {
   background-color: transparent;
   border: 1px solid hsl(var(--input));
   border-radius: 0.125rem;
@@ -219,23 +183,18 @@ textarea {
   }
 }
 
-audio,
-input,
-select,
-textarea,
-video {
+:where(audio, input, select, textarea, video) {
   &:focus {
     box-shadow: 0 0 0 3px hsl(var(--focus));
     outline: 0;
   }
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+:where(input[type="checkbox"], input[type="radio"]) {
   opacity: 0;
   position: absolute;
 
-  & + label {
+  & + :where(label) {
     cursor: pointer;
     padding-inline-start: 2rem;
     position: relative;
@@ -285,8 +244,8 @@ input[type="radio"] {
   }
 }
 
-input[type="radio"] {
-  & + label {
+:where(input[type="radio"]) {
+  & + :where(label) {
     &::before {
       border-radius: 50%;
     }
@@ -303,7 +262,7 @@ input[type="radio"] {
   }
 }
 
-input[type="range"] {
+:where(input[type="range"]) {
   appearance: none;
   border: none;
   box-shadow: none;
@@ -358,7 +317,7 @@ input[type="range"] {
   }
 }
 
-select {
+:where(select) {
   appearance: none;
   background-image: linear-gradient(
       45deg,
@@ -371,7 +330,7 @@ select {
   background-size: 5px 5px, 5px 5px;
 }
 
-button {
+:where(button) {
   background-color: hsl(var(--accent));
   border: none;
   border-radius: 0.25rem;
@@ -399,9 +358,7 @@ button {
   }
 }
 
-a,
-button,
-summary {
+:where(a, button, summary) {
   cursor: pointer;
   user-select: none;
 
@@ -415,15 +372,14 @@ summary {
   }
 }
 
-a,
-summary {
+:where(a, summary) {
   &:focus-visible {
     box-shadow: 0px 0px 0px 4px hsl(var(--focus));
     color: hsl(var(--on-focus));
   }
 }
 
-a {
+:where(a) {
   color: hsl(var(--link));
 
   &:focus {

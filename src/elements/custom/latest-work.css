@@ -46,24 +46,26 @@ section[is="latest-work"] {
     @media (min-width: 40em) {
       align-items: center;
       display: grid;
+      grid:
+        "title . image"
+        "body . image";
       grid-column-gap: 2.5rem;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
       padding-inline: 2rem;
       place-content: center;
       text-align: start;
 
       & > h4 {
         align-self: flex-end;
+        grid-area: title;
         margin-block: 0;
       }
 
       & > picture {
-        grid-column: 2;
-        grid-row: 1 / span 2;
+        grid-area: image;
       }
 
       & > div {
+        grid-area: body;
         margin-block-start: 0.5rem;
 
         & > p,
@@ -73,9 +75,9 @@ section[is="latest-work"] {
       }
 
       &:nth-of-type(even) {
-        & > picture {
-          grid-column: 1;
-        }
+        grid:
+          "image . title"
+          "image . body";
       }
     }
   }

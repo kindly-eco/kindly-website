@@ -1,5 +1,5 @@
 @import "./elements/font-faces.css";
-@import "./elements/colours.css";
+@import "./elements/custom-properties.css";
 @import "./elements/elements.css";
 @import "./elements/custom/be-part.css";
 @import "./elements/custom/breadcrumbs.css";
