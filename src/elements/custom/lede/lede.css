@@ -1,0 +1,4 @@
+p[is="lede"] {
+  font-size: clamp(1.5em, 1.5vw + 1em, 1.73em);
+  max-inline-size: 28ch;
+}

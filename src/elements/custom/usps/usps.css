@@ -13,7 +13,8 @@ section[is="usps"] {
   & > article {
     background-color: hsl(var(--elevated));
     border-radius: 1rem 1rem 75% 75% / 1rem 1rem 10% 10%;
-    box-shadow: 0 1px 0 0 hsl(var(--drop)), inset 0 1px 0 0 hsl(var(--inset));
+    box-shadow: 0 1px 0 0 hsl(var(--drop) / 20%),
+      inset 0 1px 0 0 hsl(var(--inset));
     padding: 2rem;
     text-align: center;
 

@@ -1,0 +1,12 @@
+a[is="signpost"] {
+  font-size: 1.17em;
+  font-weight: 700;
+
+  &::after {
+    content: "→";
+    display: inline-block;
+    margin-inline-start: 0.25rem;
+    position: absolute;
+    text-decoration: none;
+  }
+}

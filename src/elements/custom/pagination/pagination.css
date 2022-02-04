@@ -6,35 +6,17 @@ ul[is="pagination"] {
 
     & > a {
       display: inline-block;
-      padding-inline-start: 1rem;
+      padding-inline-start: 1.25rem;
       position: relative;
 
       &::before {
-        background-color: currentColor;
-        block-size: 0.75rem;
-        clip-path: polygon(
-          0 3%,
-          2% 0,
-          22% 0,
-          30% 2%,
-          100% 48%,
-          100% 52%,
-          30% 98%,
-          22% 100%,
-          2% 100%,
-          0 97%,
-          70% 52%,
-          70% 48%
-        );
-        content: "";
+        content: "←";
         display: block;
-        inline-size: 0.5rem;
+        font-weight: 700;
+        inset-block-start: 0.25rem;
         inset-inline-start: 0;
-        margin-block-start: 0.5rem;
-        margin-inline-end: 0.5rem;
         position: absolute;
         text-decoration: none;
-        transform: rotate(180deg);
       }
 
       & > span {
@@ -52,7 +34,7 @@ ul[is="pagination"] {
 
       & > a {
         &::before {
-          transform: rotate(0deg);
+          content: "→";
         }
       }
     }
