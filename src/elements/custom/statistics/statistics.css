@@ -3,7 +3,7 @@ aside[is="statistics"] {
   text-align: center;
 
   & > p {
-    background: no-repeat center center url("./assets/statistics.svg");
+    background: no-repeat center center url("statistics.svg");
     background-size: contain;
     color: hsl(var(--on-accent));
     margin: -7.25rem auto 3rem; /* stylelint-disable-line scales/space */

@@ -1,10 +1,9 @@
 {
-  "extends": ["stylelint-config-recommended"],
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "plugins": [
     "@signal-noise/stylelint-scales",
     "stylelint-order",
-    "stylelint-use-logical-spec",
-    "stylelint-use-nesting"
+    "stylelint-use-logical-spec"
   ],
   "rules": {
     "at-rule-allowed-list": [
@@ -14,53 +13,33 @@
       "supports",
       "media"
     ],
-    "at-rule-no-vendor-prefix": true,
-    "color-function-notation": "modern",
     "color-named": "never",
     "color-no-hex": true,
     "no-unknown-animations": true,
-    "csstools/use-nesting": "always",
-    "custom-media-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    "custom-property-empty-line-before": [
-      "always",
-      {
-        "except": ["after-custom-property"],
-        "ignore": ["after-comment", "first-nested", "inside-single-line-block"],
-        "severity": "warning"
-      }
-    ],
-    "custom-property-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    "declaration-block-no-redundant-longhand-properties": true,
-    "declaration-empty-line-before": [
-      "always",
-      {
-        "except": ["after-declaration"],
-        "ignore": ["after-comment", "first-nested", "inside-single-line-block"],
-        "severity": "warning"
-      }
-    ],
-    "declaration-no-important": true,
     "declaration-property-unit-allowed-list": {
       "/^border$|^border.*(width$|block$|inline$|start$|end$/)": ["px"],
       "/^((min|max)-)?(block-size$|inline-size$)/": ["%", "ch", "rem"],
-      "/^font/": ["%", "em"],
+      "/^font/": ["%", "em", "vw"],
       "/^gap/": ["rem"],
       "/^inset": ["rem"],
       "/^margin/": ["em", "rem", "vw"],
       "/outline/": ["px"],
-      "/^padding/": ["em", "rem"],
+      "/^padding/": ["em", "rem", "vw"],
       "/radius$/": ["%", "rem"]
     },
     "font-weight-notation": "numeric",
     "function-allowed-list": [
       "attr",
       "calc",
+      "clamp",
       "counters",
       "fit-content",
       "format",
       "grayscale",
       "hsl",
       "linear-gradient",
+      "max",
+      "min",
       "minmax",
       "polygon",
       "repeat",
@@ -75,14 +54,12 @@
     ],
     "function-url-no-scheme-relative": true,
     "function-url-scheme-allowed-list": ["data"],
-    "keyframes-name-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "liberty/use-logical-spec": "always",
     "media-feature-name-allowed-list": [
       "min-height",
       "min-width",
       "prefers-reduced-motion"
     ],
-    "media-feature-name-no-vendor-prefix": true,
     "media-feature-name-value-allowed-list": {
       "/^((min|max)-)?(width|height$)/": ["/[0-9]em$/"]
     },
@@ -100,32 +77,24 @@
         "severity": "warning"
       }
     ],
-    "property-no-vendor-prefix": true,
-    "rule-empty-line-before": [
-      "always",
-      {
-        "ignore": ["after-comment", "first-nested"],
-        "severity": "warning"
-      }
-    ],
     "scales/border-widths": [
       {
         "scale": [1, 2, 4],
         "units": ["px"]
       }
     ],
-    "scales/font-families": [["Ariata", "Hoefler", "Georgia", "serif"]],
+    "scales/font-families": ["Ariata", "Hoefler", "Vollkorn", "serif"],
     "scales/font-sizes": [
       {
         "scale": [
-          0.28, 0.48, 0.58, 0.67, 0.83, 1, 1.17, 1.5, 1.73, 2, 2.5, 3, 3.6, 4.3,
-          5.2
+          0.28, 0.48, 0.58, 0.67, 0.83, 1, 1.17, 1.5, 1.73, 2, 2.25, 2.5, 3,
+          3.6, 4.3, 5.2
         ],
         "units": ["em"]
       }
     ],
     "scales/font-weights": [400, 700],
-    "scales/line-heights": [1, 1.2, 1.5, 1.75],
+    "scales/line-heights": [1, 1.2, 1.33, 1.5, 1.75],
     "scales/radii": [
       {
         "scale": [0.125, 0.25, 0.5, 1, 2, 4],
@@ -146,14 +115,11 @@
     ],
     "scales/z-indices": [-1, 0, 1, 2, 3],
     "selector-attribute-operator-allowed-list": ["="],
-    "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "selector-combinator-allowed-list": [">", "+"],
-    "selector-id-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "selector-max-attribute": 1,
     "selector-max-class": 2,
     "selector-max-id": 0,
     "selector-nested-pattern": "^&",
-    "selector-no-vendor-prefix": true,
     "selector-pseudo-class-allowed-list": [
       "active",
       "checked",
@@ -171,15 +137,6 @@
       "root",
       "visited"
     ],
-    "selector-pseudo-element-colon-notation": "double",
-    "selector-type-no-unknown": [
-      true,
-      {
-        "ignore": ["custom-elements"]
-      }
-    ],
-    "shorthand-property-no-redundant-values": true,
-    "unit-allowed-list": ["%", "deg", "ch", "em", "fr", "px", "rem", "s", "vw"],
-    "value-no-vendor-prefix": true
+    "unit-allowed-list": ["%", "deg", "ch", "em", "fr", "px", "rem", "s", "vw"]
   }
 }

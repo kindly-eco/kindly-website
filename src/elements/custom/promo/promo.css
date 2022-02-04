@@ -2,7 +2,7 @@ a[is="promo"] {
   background-color: hsl(var(--elevated));
   border: 1px solid hsl(var(--separator));
   border-radius: 0.5rem;
-  box-shadow: 0 1px 0 0 hsl(var(--drop));
+  box-shadow: 0 2px 0 0 hsl(var(--drop) / 20%);
   color: hsl(var(--link));
   display: block;
   padding: 1rem;
@@ -19,7 +19,7 @@ a[is="promo"] {
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 3px hsl(var(--focus)), 0 1px 0 0 hsl(var(--drop));
+    box-shadow: 0 0 0 3px hsl(var(--focus)), 0 2px 0 0 hsl(var(--drop) / 20%);
   }
 
   & > h4 {

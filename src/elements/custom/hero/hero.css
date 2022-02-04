@@ -27,7 +27,7 @@ section[is="hero"] {
   }
 
   &::before {
-    mask-image: url("assets/flock.svg");
+    mask-image: url("flock.svg");
     mask-position: 50% 80%;
     mask-size: 40%;
 
@@ -43,7 +43,7 @@ section[is="hero"] {
   &::after {
     display: block;
     inset-block-end: -0.25rem;
-    mask-image: url("assets/wildlife.svg");
+    mask-image: url("wildlife.svg");
     mask-position: 6% 100%;
     mask-size: 250%;
 

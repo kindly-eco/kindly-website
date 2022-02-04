@@ -60,7 +60,7 @@ section[is="roots"] {
       inset-block-start: -1rem;
       inset-inline-end: 0;
       inset-inline-start: 0;
-      mask-image: url("assets/grass.svg");
+      mask-image: url("grass.svg");
       mask-position: 0% 0%;
       mask-repeat: repeat-x;
       mask-size: 30%;
