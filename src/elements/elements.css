@@ -21,11 +21,9 @@ html {
 
 body {
   background-color: hsl(var(--background, var(--wheat-50)));
-  box-shadow: 0 8px 8px hsl(var(--drop));
   color: hsl(var(--text));
   font-family: Vollkorn, serif;
   margin: 0 auto;
-  max-inline-size: 90rem;
 }
 
 main {
