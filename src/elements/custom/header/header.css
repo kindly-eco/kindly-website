@@ -19,7 +19,7 @@ header[is="header"] {
   }
 
   @media (min-width: 30em) {
-    padding-block-start: 2rem;
+    padding: 2rem 2rem 0;
 
     & > a {
       & > svg {

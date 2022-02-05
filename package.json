@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "The website of Kindly",
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/*.html",
     "start": "parcel serve src/*.html",
     "check:css": "stylelint '**/*.css' --ignore-path .gitignore",
     "check:format": "prettier '**/*.{css,html,js,json,md,yml}' --check --ignore-path .gitignore",
